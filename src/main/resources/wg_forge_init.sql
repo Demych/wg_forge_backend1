@@ -39,8 +39,10 @@ CREATE TABLE cats_stat (
     id int, 
     tail_length_mean numeric,
     tail_length_median numeric,
+    tail_length_mode integer[],
     whiskers_length_mean numeric,
     whiskers_length_median numeric,
+    whiskers_length_mode integer[]
     PRIMARY KEY (id)
 );
 
@@ -51,8 +53,10 @@ insert into cats_stat(id,tail_length_mean, tail_length_median, whiskers_length_m
                       values (1,
                       (select avg(tail_length) from cats),
                       (select percentile_cont(0.5) within group (order by tail_length) from cats),
+		       0,
                       (select avg(whiskers_length) from cats),
-                      (select percentile_cont(0.5) within group (order by whiskers_length) from cats));
+                      (select percentile_cont(0.5) within group (order by whiskers_length) from cats),
+		       0);
 
 
 /* Создаем таблицу статистики количества окраса*/

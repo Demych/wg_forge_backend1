@@ -1,1 +1,14 @@
+wot\utilss\ValidationImpl.class
+wot\service\impl\CatServiceImpl.class
+wot\entity\Cat.class
+wot\controller\CatController.class
+wot\exception\ValidateNameException.class
+wot\exception\ValidateTailException.class
+wot\utilss\Validation.class
+wot\exception\ValidateColorException.class
 wot\Application.class
+wot\entity\CatsStat.class
+wot\exception\ValidateWhiskersException.class
+wot\entity\CatColor.class
+wot\repository\CatRepository.class
+wot\service\CatService.class

@@ -27,18 +27,11 @@ public class CatController {
         return "Cats Service. Version 0.1";
     }
 
-//    @GetMapping(value = "get")
-//    public ArrayList<Cat> getCats() {
-//        System.out.println("Вошли в метод getCats");
-//        return (ArrayList<Cat>) catService.findAll();
-//    }
 
     @GetMapping(value = "cats")
     public ArrayList<Cat> getSortCats(@RequestParam (required = false) String attribute,
                                       @RequestParam (defaultValue = "asc") String order) throws ValidateColorException {
-
-        System.out.println("Вошли в метод getCats");
-        System.out.println(order);
+        
         if (attribute == null) {
             return (ArrayList < Cat >) catService.findAll();
         }
@@ -48,11 +41,10 @@ public class CatController {
 
     @PostMapping(value = "/cat")
     public Cat saveCat(@RequestBody @Valid Cat cat) throws ValidateColorException, ValidateWhiskersException, ValidateNameException, ValidateTailException {
-        System.out.println(cat.getColor());
+
         ValidationImpl valid = new ValidationImpl();
         valid.validate(cat);
 
-//        cat.setColor(CatColor.BLACK);
         return catService.save(cat);
     }
 
