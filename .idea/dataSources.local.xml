@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="WOT" uuid="b8123981-732c-4970-8fa2-b85e5df2ed34">
+    <data-source name="wg_forge_db@localhost" uuid="fa050aca-dc2b-41a5-a2fa-1e5b9547f947">
       <database-info product="PostgreSQL" version="9.5.16" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2" dbms="POSTGRES" exact-version="9.5.16" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
