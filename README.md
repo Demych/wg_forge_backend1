@@ -26,4 +26,4 @@
     (В таблице cats_stat: добавлено поле id как Primery key,
     убраны колонки  tail_length_mode integer[], whiskers_length_mode integer[], т.к не написал код их вычисления).
     
-    6) В папке target открываем консоль и запускаем проект с помощью команды java -jar WOT-1.0-SNAPSHOT.jar (если ничего не менялось,      название WOT-1.0-SNAPSHOT должно остаться)
+ 6) В папке target открываем консоль и запускаем проект с помощью команды java -jar WOT-1.0-SNAPSHOT.jar (если ничего не менялось,      название WOT-1.0-SNAPSHOT должно остаться)
