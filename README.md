@@ -1,10 +1,8 @@
 # wg_forge_backend1
 1) Открываем папку в которую хотим скачать проект.
-
   Вызываем git bash.
-
-  Вводим команду:
-
+  Вводим команду
+ 
   git clone https://github.com/Demych/wg_forge_backend1.git
 
 2) Создать БД в Postgresql
