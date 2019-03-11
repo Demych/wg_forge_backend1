@@ -38,16 +38,27 @@ GET http://localhost:8080/cats?attribute=tailLength?order=asc/desc  вернет
 Параметры offer и limit не реализовывал. Валидацию в данном задании тоже не сделана.
 
 POST http://localhost:8080/cat сохраняет кота в БД. 
+
 Тело запроса {
+
         "name": "Asya",  //не может быть пустым
+       
         "color": "black", // может быть только: 'black', 'white','black & white','red','red & white','red & black & white'
+        
         "tailLength": 10, // не можеть быть меньше нуля или равно нулю
+        
         "whiskersLength": 10 // не может быть меньше нуля или равно нулю
+        
     }
 Возможные исключения валидации: ValidateNameException("Name can not be empty");
+
                             ValidateColorException("Color can not be empty");
+                            
                             ValidateColorException("ValidationImpl error. There is no such color");
+                            
                             ValidateTailException("The length of the tail can not be less than 0 or equal");
+                            
                             ValidateWhiskersException("The length of the whiskers can not be less than 0 or equal");
+                            
                             
 Если указать неверный формат JSON, то выкенется исключение JSON parse error
