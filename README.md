@@ -35,9 +35,8 @@ GET http://localhost:8080/ping  - вернет строку "Cats Service. Versi
 
 GET http://localhost:8080/cats - вернет всех котов из БД. 
 
-GET http://localhost:8080/cats?attribute=tailLength?order=asc/desc  вернет котов отсортированных по указанному аттрибуту. ASC- по возрастанию, desc - по убыванию. 
-
-Параметры offer и limit не реализовывал. Валидацию в данном задании тоже не сделана.
+GET http://localhost:8080/cats?attribute=tailLength?order=asc/desc  вернет котов отсортированных по указанному аттрибуту. ASC- по возрастанию, desc - по убыванию.
+Параметры offer и limit не реализовывал. Валидация в данном задании тоже не сделана.
 
 POST http://localhost:8080/cat сохраняет кота в БД. 
 Тело запроса {
