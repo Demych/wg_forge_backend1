@@ -8,11 +8,9 @@
 2) Создать БД в Postgresql
 
 3) В файле application.properties конфигурируется подключение к БД (название БД, пользователь и пароль) 
-  # JDBC URL of the database.
+
   spring.datasource.url=jdbc:postgresql://localhost:5432/wg_force_db
-  # Login username of the database.
   spring.datasource.username=postgres
-  # Login password of the database.
   spring.datasource.password=root
 
 4) Собрать проект с помощью maven:
@@ -30,6 +28,8 @@
 
   7) Скрестив пальцы, вспомнив все хорошое,  ждать волшебной фразы "!!!!Всем привет, я поднялся!!!!"
 
+========================================================================================================================================
+
 Запросы на сервер:
 GET http://localhost:8080/ping  - вернет строку "Cats Service. Version 0.1"
 
@@ -38,7 +38,6 @@ GET http://localhost:8080/cats?attribute=tailLength?order=asc/desc  вернет
 Параметры offer и limit не реализовывал. Валидацию в данном задании тоже не сделана.
 
 POST http://localhost:8080/cat сохраняет кота в БД. 
-
 Тело запроса {
 
         "name": "Asya",  //не может быть пустым
