@@ -2,6 +2,7 @@ package wot.utilss;
 
 import org.apache.tomcat.util.buf.StringUtils;
 import wot.entity.Cat;
+import wot.entity.CatColor;
 import wot.exception.ValidateColorException;
 import wot.exception.ValidateNameException;
 import wot.exception.ValidateTailException;

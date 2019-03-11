@@ -23,7 +23,7 @@ public class Cat {
     public Cat() {
     }
 
-    public Cat(String name, String color, @NotNull(message = "Возраст кота должен Zбыть") int tailLength, int whiskersLength) {
+    public Cat(@NotNull String name, String color, @NotNull(message = "Возраст кота должен Zбыть") int tailLength, int whiskersLength) {
         this.name = name;
         this.color = color;
         this.tailLength = tailLength;

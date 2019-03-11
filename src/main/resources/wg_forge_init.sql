@@ -31,18 +31,30 @@ INSERT INTO cats (name, color, tail_length, whiskers_length) VALUES
 ('Neo', 'red', 11, 13),
 ('Nord', 'red & black & white', 19, 12),
 ('Kelly', 'red & white', 26, 11),
-('Ost', 'white', 14, 12);
-
+('Ost', 'white', 14, 12),
+('Tayson', 'red & white', 18, 13),
+('Lesya', 'black & white', 12, 15),
+('Foma', 'black', 15, 18),
+('Odett', 'red & white', 17, 13),
+('Cesar', 'black & white', 18, 14),
+('Shurik', 'red & white', 17, 13),
+('Flora', 'black & white', 12, 15),
+('Tara', 'red & white', 17, 12),
+('Yasha', 'red & white', 18, 12),
+('Chlo', 'black', 14, 13),
+('Snow', 'white', 19, 14),
+('Sam', 'black & white', 15, 15),
+('Ula', 'red & white', 16, 14),
+('Nemo', 'red & white', 17, 13)
+;
 
 /* Создаем таблицу статистики*/
 CREATE TABLE cats_stat (
     id int, 
     tail_length_mean numeric,
     tail_length_median numeric,
-    tail_length_mode integer[],
     whiskers_length_mean numeric,
     whiskers_length_median numeric,
-    whiskers_length_mode integer[]
     PRIMARY KEY (id)
 );
 
@@ -53,10 +65,8 @@ insert into cats_stat(id,tail_length_mean, tail_length_median, whiskers_length_m
                       values (1,
                       (select avg(tail_length) from cats),
                       (select percentile_cont(0.5) within group (order by tail_length) from cats),
-		       0,
                       (select avg(whiskers_length) from cats),
-                      (select percentile_cont(0.5) within group (order by whiskers_length) from cats),
-		       0);
+                      (select percentile_cont(0.5) within group (order by whiskers_length) from cats));
 
 
 /* Создаем таблицу статистики количества окраса*/
@@ -123,6 +133,7 @@ where color = 'red & white';
 update cat_colors_info
 set count = (select count(color) from cats where color = 'red & black & white')
 where color = 'red & black & white';
+return NEW;
 end;$BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;

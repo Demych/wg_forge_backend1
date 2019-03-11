@@ -31,7 +31,7 @@ public class CatController {
     @GetMapping(value = "cats")
     public ArrayList<Cat> getSortCats(@RequestParam (required = false) String attribute,
                                       @RequestParam (defaultValue = "asc") String order) throws ValidateColorException {
-        
+
         if (attribute == null) {
             return (ArrayList < Cat >) catService.findAll();
         }
@@ -41,7 +41,6 @@ public class CatController {
 
     @PostMapping(value = "/cat")
     public Cat saveCat(@RequestBody @Valid Cat cat) throws ValidateColorException, ValidateWhiskersException, ValidateNameException, ValidateTailException {
-
         ValidationImpl valid = new ValidationImpl();
         valid.validate(cat);
 
