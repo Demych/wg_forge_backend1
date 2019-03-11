@@ -39,7 +39,8 @@ GET http://localhost:8080/cats?attribute=tailLength?order=asc/desc  вернет
 Параметры offer и limit не реализовывал. Валидация в данном задании тоже не сделана.
 
 POST http://localhost:8080/cat сохраняет кота в БД. 
-Тело запроса {
+Тело запроса 
+{
 
         "name": "Asya",  //не может быть пустым
        
